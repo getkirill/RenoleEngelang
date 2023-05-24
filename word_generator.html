@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Renole Engelang - Word generator</title>
-    <link rel="stylesheet" href="/styles/index.css" />
+    <link rel="stylesheet" href="../styles/index.css" />
   </head>
   <body>
-    <a href="/">Go back to title page.</a>
+    <a href="../">Go back to title page.</a>
     <h2>Word generator</h2>
     It is hard to come up with words. You can use this page to generate words
     and pronounciations.
@@ -55,8 +55,8 @@
       <input type="button" name="copy" value="Copy as &lt;tr&gt;" /><br />
     </form>
     <script type="module">
-      import {generateWord, escapeWord, wordPronounciation} from '/js/librenole.js'
-      import {mulberry32, jsRandomInt} from '/js/util.js'
+      import {generateWord, escapeWord, wordPronounciation} from '../js/librenole.js'
+      import {mulberry32, jsRandomInt} from '../js/util.js'
       const form = document.querySelector("form#generator");
       form.querySelector(`[name="seed"]`).value = jsRandomInt(0, 4294967295);
       form.querySelector(`[name="generate"]`).addEventListener("click", () => {
