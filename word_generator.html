@@ -61,7 +61,7 @@
       form.querySelector(`[name="seed"]`).value = jsRandomInt(0, 4294967295);
       form.querySelector(`[name="generate"]`).addEventListener("click", () => {
         form.querySelector(`[name="resultseed"]`).value = form.querySelector(`[name="seed"]`).value;
-        const word = generateWord();
+        const word = generateWord(+form.querySelector(`[name="seed"]`).value);
         form.querySelector(`[name="result"]`).value = word;
         const escaped = escapeWord(word);
         form.querySelector(`[name="escaped"]`).value = escaped;
